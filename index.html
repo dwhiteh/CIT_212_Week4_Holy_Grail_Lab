@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dale's Holy Grail Layout Lab</title>
+    <style>
+        header {
+            width: 90%;
+            height: 100px;
+            background-color: #6B104B;
+            border: 3px solid #EB23A5;
+            padding: 10px;
+            margin: 25px;
+        }
+        nav {
+            position: fixed;
+            width: 90%;
+            height: 50px;
+            background-color: #EE6BC0;
+            position: fixed;
+            top: 170px;
+            left: 35px;
+        }
+        article {
+            width: 65%;
+            height: 200px;
+            background-color: #EB23A5;
+            border: 5px solid #6B104B;
+            position: relative;
+            top: 15px;
+        }
+        aside {
+            width: 40%;
+            height: 420px;
+            background-color: #6B3056;
+            position: absolute;
+            left: 50%;
+            right: 10%;
+            top: 235px;
+        }
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: #B81B82;
+            position: fixed;
+            bottom: 0px;
+        }
+        .articles {
+            position: relative;
+            left: 30px;
+            top: 45px;
+            width: 65%;
+            height: 70%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p style = "color: white;">The header does not have any positioning. It assumes default, which is the first thing on the page at the top. It is also static, meaning it will not move with the page. Will always remain at the top.</p>
+    </header>
+    <nav>
+        <p style = "color: white;";>This is the navigation bar. It has fixed positioning at 170 pixels from the top and 35 pixels from the left. It will always be at this position in the web browser. Although currently the articles will cover it up when you scroll. Hopefully that is something we will cover and not something I messed up or missed.</p>
+    </nav>
+    <div>
+        <div class="articles">
+            <article>
+                <p style ="color: white;"> This is the first of two articles inside the div class 'articles'. The div class 'articles' has relative positioning of 45 pixels from the top and 30 pixels from the left. It is relative to the nav bar because that is its position in the body.</p>
+            </article>
+            <article>
+                <p style = "color: white;"> This is the second article in the div class 'articles'. It has the exact same positioning as the other article because they are not differentiated and have internal styling. The position is relative and is 15 pixels from the top of the div class 'articles'. The second one isn't actually 15 pixels because it is immediately after the first article.</p>
+            </article>
+        </div>
+    <aside>
+        <p style = "color: white;"> This is the aside. It has absolute positioning. It begins halfway across the body and 235 pixels from the default top. So 235 pixels from the top of the header.</p>
+    </aside>
+    </div>
+    <footer>
+        <p style = "color: white;"> This is the footer. It has fixed positioning at 0 pixels from the bottom!</p>
+    </footer>
+</body>
+</html>
